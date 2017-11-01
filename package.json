@@ -17,7 +17,8 @@
     "roaster": "^1.1.2",
     "temp": "^0.8.1",
     "underscore-plus": "^1.0.0",
-    "wrench": "^1.5.0"
+    "wrench": "^1.5.0",
+    "snyk": "^1.47.0"
   },
   "devDependencies": {
     "coffeelint": "^1.9.7"
@@ -59,5 +60,10 @@
       "default": false,
       "description": "Use the same CSS styles for preview as the ones used on GitHub.com."
     }
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
